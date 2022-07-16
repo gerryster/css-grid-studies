@@ -21,108 +21,118 @@
 
     <h2>As Columns</h2>
 
-    <h3>Basics</h3>
-    <div class="content-grid-two-cols">
-      <section>
-        <h4>grid-template-columns: 1fr 1fr 1fr 1fr;</h4>
+    <section class="grouping-section">
+      <h3>Basics</h3>
+      <div class="content-grid-two-cols">
+        <section>
+          <h4>grid-template-columns: 1fr 1fr 1fr 1fr;</h4>
 
-        <style>
-          #grid-template-columns-1 {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr 1fr;
-          }
-        </style>
+          <style>
+            #grid-template-columns-1 {
+              display: grid;
+              grid-template-columns: 1fr 1fr 1fr 1fr;
+            }
+          </style>
 
-        <div id="grid-template-columns-1" class="bordered-children">
-          <div>Soprano</div>
-          <div>Alto</div>
-          <div>Tenor</div>
-          <div>Bass</div>
-        </div>
-      </section>
+          <div id="grid-template-columns-1" class="bordered-children">
+            <div>Soprano</div>
+            <div>Alto</div>
+            <div>Tenor</div>
+            <div>Bass</div>
+          </div>
+        </section>
 
-      <section>
-        <h4>grid-template-columns: repeat(4, 1fr);</h4>
+        <section>
+          <h4>grid-template-columns: repeat(4, 1fr);</h4>
 
-        <style>
-          #grid-template-columns-2 {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-          }
-        </style>
+          <style>
+            #grid-template-columns-2 {
+              display: grid;
+              grid-template-columns: repeat(4, 1fr);
+            }
+          </style>
 
-        <div id="grid-template-columns-2" class="bordered-children">
-          <div>Soprano</div>
-          <div>Alto</div>
-          <div>Tenor</div>
-          <div>Bass</div>
-        </div>
-      </section>
-    </div>
+          <div id="grid-template-columns-2" class="bordered-children">
+            <div>Soprano</div>
+            <div>Alto</div>
+            <div>Tenor</div>
+            <div>Bass</div>
+          </div>
+        </section>
+      </div>
+    </section>
 
-    <h3>fit-content</h3>
+    <section class="grouping-section">
+      <h3>fit-content</h3>
 
-    <p>In this example, the third column's content is clamped at 4rem.</p>
+      <p>In this example, the third column's content is clamped at 4rem.</p>
 
-    <h4>grid-template-columns: 1fr 1fr fit-content(4rem) 1fr</h4>
+      <h4>grid-template-columns: 1fr 1fr fit-content(4rem) 1fr</h4>
 
-    <style>
-      #grid-template-columns-fit-content-1 {
-        display: grid;
-        grid-template-columns: 1fr 1fr fit-content(4rem) 1fr;
-      }
-    </style>
+      <style>
+        #grid-template-columns-fit-content-1 {
+          display: grid;
+          grid-template-columns: 1fr 1fr fit-content(4rem) 1fr;
+        }
+      </style>
 
-    <div id="grid-template-columns-fit-content-1" class="bordered-children">
-      <div>Soprano</div>
-      <div>Alto</div>
-      <div>Tenor trombone; foo</div>
-      <div>Bass trombone; foo</div>
-    </div>
+      <div id="grid-template-columns-fit-content-1" class="bordered-children">
+        <div>Soprano</div>
+        <div>Alto</div>
+        <div>Tenor trombone; foo</div>
+        <div>Bass trombone; foo</div>
+      </div>
 
-    <p>Compare to even columns:</p>
-    <div id="grid-template-columns-2" class="bordered-children">
-      <div>Soprano</div>
-      <div>Alto</div>
-      <div>Tenor trombone; foo</div>
-      <div>Bass trombone; foo</div>
-    </div>
+      <p>Compare to even columns:</p>
+      <div id="grid-template-columns-2" class="bordered-children">
+        <div>Soprano</div>
+        <div>Alto</div>
+        <div>Tenor trombone; foo</div>
+        <div>Bass trombone; foo</div>
+      </div>
 
-    <h4>grid-template-columns: 1fr fit-content(4rem) fit-content(4rem) 4rem</h4>
+      <h4>grid-template-columns: 1fr fit-content(4rem) fit-content(4rem) 4rem</h4>
 
-    <p>This shows that <code>fit-content</code> picks the maximum of the argument and content width as Alto is less then 4rem.</p>
+      <p>This shows that <code>fit-content</code> picks the maximum of the argument and content width as Alto is less then 4rem.</p>
 
-    <style>
-      #grid-template-columns-fit-content-and-fixed {
-        display: grid;
-        grid-template-columns: 1fr fit-content(4rem) fit-content(4rem) 4rem;
-      }
-    </style>
+      <style>
+        #grid-template-columns-fit-content-and-fixed {
+          display: grid;
+          grid-template-columns: 1fr fit-content(4rem) fit-content(4rem) 4rem;
+        }
+      </style>
 
-    <div id="grid-template-columns-fit-content-and-fixed" class="bordered-children">
-      <div>Soprano</div>
-      <div>Alto</div>
-      <div>Tenor trombone; foo</div>
-      <div>Bass trombone; foo</div>
-    </div>
+      <div id="grid-template-columns-fit-content-and-fixed" class="bordered-children">
+        <div>Soprano</div>
+        <div>Alto</div>
+        <div>Tenor trombone; foo</div>
+        <div>Bass trombone; foo</div>
+      </div>
 
-    <h4>grid-template-columns minmax vs fit-content: 1fr 1fr fit-content(4rem) minmax(auto, 4rem)</h4>
+      <h4>grid-template-columns minmax vs fit-content: 1fr 1fr fit-content(4rem) minmax(auto, 4rem)</h4>
 
-    <p>In this example, tenor uses fit-content which is functionally the same as bass using minmax.</p>
+      <p>In this example, tenor uses fit-content which is functionally the same as bass using minmax.</p>
 
-    <style>
-      #grid-template-columns-fit-content-and-minmax {
-        display: grid;
-        grid-template-columns: 1fr 1fr fit-content(4rem) minmax(auto, 4rem);
-      }
-    </style>
+      <style>
+        #grid-template-columns-fit-content-and-minmax {
+          display: grid;
+          grid-template-columns: 1fr 1fr fit-content(4rem) minmax(auto, 4rem);
+        }
+      </style>
 
-    <div id="grid-template-columns-fit-content-and-minmax" class="bordered-children">
-      <div>Soprano</div>
-      <div>Alto</div>
-      <div>Tenor trombone; foo</div>
-      <div>Bass trombone; foo</div>
-    </div>
+      <div id="grid-template-columns-fit-content-and-minmax" class="bordered-children">
+        <div>Soprano</div>
+        <div>Alto</div>
+        <div>Tenor trombone; foo</div>
+        <div>Bass trombone; foo</div>
+      </div>
+    </section>
+
+    <section class="grouping-section">
+      <h3>Line Names</h3>
+
+      <p>left off here</p>
+    </section>
 
   </body>
 </html>
