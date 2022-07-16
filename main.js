@@ -1,7 +1,11 @@
 MAX_TRIES = 100;
 
-function toggleVisible(event) {
-  const sectionEl = getNextSectionEl(event.target);
+function toggleVisibleHandler(event) {
+  toggleVisible(event.target);
+}
+
+function toggleVisible(element) {
+  const sectionEl = getNextSectionEl(element);
   const currentDisplay = window.getComputedStyle(sectionEl).display;
   const newDisplay = currentDisplay === 'block' ? 'none' : 'block';
   sectionEl.style.display = newDisplay;
@@ -22,6 +26,9 @@ function getNextSectionEl(element) {
 
 function init() {
   document.querySelectorAll('h3').forEach(function(h3) {
-    h3.addEventListener('click', toggleVisible);
+    h3.addEventListener('click', toggleVisibleHandler);
   });
+
+  const lastH3 = document.querySelector('h3:last-of-type');
+  toggleVisible(lastH3);
 }
