@@ -20,19 +20,20 @@
     </div>
 
     <h2>As Columns</h2>
-    <div class="content-grid-two-cols">
 
+    <h3>Basics</h3>
+    <div class="content-grid-two-cols">
       <section>
-        <h3>grid-template-columns: 1fr 1fr 1fr 1fr;</h3>
+        <h4>grid-template-columns: 1fr 1fr 1fr 1fr;</h4>
 
         <style>
-          #grid-template-columns {
+          #grid-template-columns-1 {
             display: grid;
             grid-template-columns: 1fr 1fr 1fr 1fr;
           }
         </style>
 
-        <div id="grid-template-columns" class="bordered-children">
+        <div id="grid-template-columns-1" class="bordered-children">
           <div>Soprano</div>
           <div>Alto</div>
           <div>Tenor</div>
@@ -41,22 +42,50 @@
       </section>
 
       <section>
-        <h3>grid-template-columns: repeat(4, 1fr);</h3>
+        <h4>grid-template-columns: repeat(4, 1fr);</h4>
 
         <style>
-          #grid-template-columns {
+          #grid-template-columns-2 {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
           }
         </style>
 
-        <div id="grid-template-columns" class="bordered-children">
+        <div id="grid-template-columns-2" class="bordered-children">
           <div>Soprano</div>
           <div>Alto</div>
           <div>Tenor</div>
           <div>Bass</div>
         </div>
       </section>
+    </div>
+
+    <h3>fit-content</h3>
+
+    <p>In this example, the third columns' content is clamped at 4rem.</p>
+
+    <h4>grid-template-columns: 1fr 1fr fit-content(4rem) 1fr</h4>
+
+    <style>
+      #grid-template-columns-fit-content-1 {
+        display: grid;
+        grid-template-columns: 1fr 1fr fit-content(4rem) 1fr;
+      }
+    </style>
+
+    <div id="grid-template-columns-fit-content-1" class="bordered-children">
+      <div>Soprano</div>
+      <div>Alto</div>
+      <div>Tenor trombone; foo</div>
+      <div>Bass trombone; foo</div>
+    </div>
+
+    <p>Compare to even columns:</p>
+    <div id="grid-template-columns-2" class="bordered-children">
+      <div>Soprano</div>
+      <div>Alto</div>
+      <div>Tenor trombone; foo</div>
+      <div>Bass trombone; foo</div>
     </div>
   </body>
 </html>
