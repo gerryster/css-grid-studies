@@ -1,5 +1,6 @@
 body {
   margin: 2rem;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
 }
 
 h1 { margin: 1rem     0; }
@@ -23,4 +24,5 @@ h5 { margin: 0.125rem 0; }
   margin-bottom: 1rem;
   padding-left: .5rem;
   border-left: 2px solid rgb(5, 5, 175);
+  display: none;
 }
