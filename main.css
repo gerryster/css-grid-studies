@@ -1,0 +1,13 @@
+body {
+  margin: 2rem;
+}
+
+.bordered-children * {
+  border: 1px solid black;
+}
+
+.content-grid-two-cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}

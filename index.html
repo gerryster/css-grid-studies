@@ -1,0 +1,62 @@
+<html>
+  <head>
+    <link href="main.css" rel="stylesheet">
+  </head>
+  <body>
+    <h1>CSS Grid Studies</h1>
+
+    <h2>Just Display: Grid</h2>
+    <style>
+      #just-display-grid {
+        display: grid;
+      }
+    </style>
+
+    <div id="just-display-grid" class="bordered-children">
+      <div>Soprano</div>
+      <div>Alto</div>
+      <div>Tenor</div>
+      <div>Bass</div>
+    </div>
+
+    <h2>As Columns</h2>
+    <div class="content-grid-two-cols">
+
+      <section>
+        <h3>grid-template-columns: 1fr 1fr 1fr 1fr;</h3>
+
+        <style>
+          #grid-template-columns {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+          }
+        </style>
+
+        <div id="grid-template-columns" class="bordered-children">
+          <div>Soprano</div>
+          <div>Alto</div>
+          <div>Tenor</div>
+          <div>Bass</div>
+        </div>
+      </section>
+
+      <section>
+        <h3>grid-template-columns: repeat(4, 1fr);</h3>
+
+        <style>
+          #grid-template-columns {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+          }
+        </style>
+
+        <div id="grid-template-columns" class="bordered-children">
+          <div>Soprano</div>
+          <div>Alto</div>
+          <div>Tenor</div>
+          <div>Bass</div>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
